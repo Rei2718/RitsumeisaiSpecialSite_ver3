@@ -77,7 +77,11 @@ const ActiveEventsList: React.FC = () => {
         <p className='text-center text-lg pt-2'>
           <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Active Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
         </p>
-        <div className={`grid gap-4 pt-4 px-4 ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+
+        {/* 前日に消す。下の要素のBlurも忘れずに */}
+        <div className='flex items-center justify-center animate-pulse'>CommingSoon...</div>
+
+        <div className={`grid gap-4 pt-4 px-4 blur-sm ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
           {activeEventList.map(event => (
             <div key={event.id} className="w-full mx-auto py-2 flex items-center justify-center animate-pulse" onClick={() => router.push('/time')}> {/* 変更点 */}
               <div className="flex gap-x-2 relative group rounded-lg">

@@ -42,13 +42,16 @@ function HomeContent() {
           </div>
 
         </div>
+
+        {/* 
         <div className="absolute inset-x-0 bottom-[25vh] w-9/12 max-w-md mx-auto z-10">
           <Link href="/start">
-            <button className="bg-[rgb(235,235,235)] backdrop-filter backdrop-blur-sm shadow-md py-2 px-4 w-full text-base rounded-full">
+            <button className="bg-white backdrop-filter backdrop-blur-sm shadow-md py-2 px-4 w-full text-base rounded-full">
               GET STARTED →
             </button>
           </Link>
         </div>
+        */}
       </section>
     </div>
   );

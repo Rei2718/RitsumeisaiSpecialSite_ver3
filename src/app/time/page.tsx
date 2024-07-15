@@ -19,7 +19,7 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
   if (activeEvents.length === 0) 
     return(
       <>
-        <div className="w-10/12 mx-auto max-w-md">
+        <div className="w-10/12 mx-auto max-w-md pb-8">
           <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl p-2 text-center">
             <p className='text-center text-lg pt-2'>
               <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Active Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
@@ -36,8 +36,12 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
         <p className='text-center text-lg pt-2'>
           <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Active Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
         </p>
+
+        {/* 前日に消す。下の要素のBlurも忘れずに */}
+        <div className='flex items-center justify-center animate-pulse'>CommingSoon...</div>
+        
         {activeEvents.map((activeItem) => (
-          <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse">
+          <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse blur-sm">
             <div className="flex gap-x-2 relative group rounded-lg justify-center">
               <div className="flex items-center justify-center">
                 <button type="button" className="text-left relative z-10 inline-flex items-center gap-x-1 text-xs rounded-lg border border-transparent font-semibold">
@@ -112,7 +116,7 @@ const ItemList: React.FC<{ items: any[]; currentTime: Date }> = ({ items, curren
       {sortedItems.map((item, index) => {
         const linkHref = generateLinkHref(item);
         const nextItemTime = sortedItems[index + 1]?.time1;
-
+        
         return (
           <div key={item.id} className={`flex gap-x-3 relative group rounded-xl p-2 justify-center ${isActiveItem(item.time1, nextItemTime) ? 'bg-gradient-to-r from-yellow-100  via-yellow-50 via-[70%] to-transparent to-[99%] animate-pulse' : ''}`}>
             {!item.id.startsWith('p') && linkHref && <Link href={linkHref} className="absolute inset-0 z-[1]" />}

@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Noise = () => {
+  const isAppleDevice = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
+
   return (
     <>
       {/* SVG Noise Filter */}
@@ -8,19 +10,19 @@ const Noise = () => {
         <filter id="noiseFilter">
           <feTurbulence 
             type="fractalNoise" 
-            baseFrequency="0.8" 
+            baseFrequency={isAppleDevice ? "14.4" : "14.4"} 
             numOctaves="5" 
             stitchTiles="stitch" 
           />
           <feColorMatrix
             type="matrix"
-            values="0.1 0.1 0.1 0 0
-                    0.1 0.1 0.1 0 0
-                    0.1 0.1 0.1 0 0
-                    0 0 0 0.3 0"
+            values="0.25 0.25 0.25 0 0
+                    0.25 0.25 0.25 0 0
+                    0.25 0.25 0.25 0 0
+                    0 0 0 0.25 0"
           />
           <feComponentTransfer>
-            <feFuncA type="gamma" amplitude="0.2" exponent="1" offset="0.1" />
+            <feFuncA type="gamma" amplitude={isAppleDevice ? "1.2" : "0.2"} exponent="1" offset="0.1" />
           </feComponentTransfer>
         </filter>
       </svg>
