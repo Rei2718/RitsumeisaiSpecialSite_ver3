@@ -34,7 +34,7 @@ function HomeContent() {
             2024.7.20 (Sat) - 2024.7.21 (Sun)
           </div>
           <div className="text-base sm:text-base md:text-base lg:text-lg">
-            @RitsumeikanKeisho
+            @RitsumeikanKeisho Ver.3.1
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center -z-10 floating">
