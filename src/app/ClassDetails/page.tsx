@@ -111,14 +111,14 @@ const HeaderSection: React.FC<{ selectedItem: any }> = ({ selectedItem }) => (
       </div>
       <h1 className="text-2xl font-semibold mt-4">{selectedItem.title}</h1>
     </div>
-    <div className="text-left py-2 text-[rgb(130,130,130)]">
+    <div className="text-left py-2">
       <p className="text-lg">Presented by : {selectedItem.name}</p>
     </div>
   </div>
 );
 
 const TimeLocationSection: React.FC<{ selectedItem: any }> = ({ selectedItem }) => (
-  <div className="text-left text-[rgb(130,130,130)] text-sm">
+  <div className="text-left text-sm">
     <div className="flex justify-start space-x-4 pt-4">
       <div className="flex items-center">
         <FiClock className='w-5 h-5' />
@@ -139,7 +139,7 @@ const TimeLocationSection: React.FC<{ selectedItem: any }> = ({ selectedItem }) 
 const DescriptionSection: React.FC<{ selectedItem: any }> = ({ selectedItem }) => (
   <div>
     <h2 className="text-lg text-left pt-6 font-semibold">ABOUT</h2>
-    <p className="text-left text-sm text-[rgb(130,130,130)] pt-2">
+    <p className="text-left text-sm pt-2">
       {selectedItem.description}
     </p>
   </div>
@@ -151,10 +151,10 @@ const CautionSection: React.FC = () => (
       CAUTION
       <p className='text-xs ml-2'>(一般来場者の方へ)</p>
     </div>
-    <p className="text-left text-[rgb(130,130,130)] pt-2 text-sm">
+    <p className="text-left pt-2 text-sm">
       自由観覧(一般公開時間)はお守りください
     </p>
-    <div className="pt-1 text-[rgb(130,130,130)]">
+    <div className="pt-1">
       <div className="flex items-center">
         <FiClock className='w-5 h-5' />
         <p className="py-1 ml-2">DAY1 : 11:00 ~ 15:30</p>
@@ -190,7 +190,7 @@ const ThumbnailsSection: React.FC<{ randomItems: any[], handleThumbnailClick: (i
           </div>
           <div className="p-4">
             <h3 className="font-bold text-lg">{item.title}</h3>
-            <p className="text-sm text-[rgb(130,130,130)] pt-2">{item.description}</p>
+            <p className="text-sm pt-2">{item.description}</p>
           </div>
         </div>
       ))}

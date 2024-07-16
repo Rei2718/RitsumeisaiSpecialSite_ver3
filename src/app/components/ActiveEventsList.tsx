@@ -79,9 +79,9 @@ const ActiveEventsList: React.FC = () => {
         </p>
 
         {/* 前日に消す。下の要素のBlurも忘れずに */}
-        <div className='flex items-center justify-center animate-pulse'>CommingSoon...</div>
+        <div className='flex items-center justify-center animate-pulse'>注 : 立命祭は20,21日開催です</div>
 
-        <div className={`grid gap-4 pt-4 px-4 blur-sm ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+        <div className={`grid gap-4 pt-4 px-4 ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
           {activeEventList.map(event => (
             <div key={event.id} className="w-full mx-auto py-2 flex items-center justify-center animate-pulse" onClick={() => router.push('/time')}> {/* 変更点 */}
               <div className="flex gap-x-2 relative group rounded-lg">
@@ -110,7 +110,7 @@ const ActiveEventsList: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="text-center text-sm pb-4 text-sky-400 z-30">see more detailes</div>
+        <div className="text-center text-xs pb-4">詳しくはタイムラインをご確認ください</div>
       </div>
     </div>
   );

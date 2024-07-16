@@ -51,11 +51,20 @@ const TabContents: React.FC<{ activeTab: string; items: any[] }> = ({ activeTab,
     activeTab === 'JuniorHigh' ? item.id.startsWith('j') : item.id.startsWith('s')
   ), [activeTab, items]);
 
-  const sections = [
-    { id: '1', title: '一年生', subtitle: '~プレゼンテーション~', prefix: '1' },
-    { id: '2', title: '二年生', subtitle: '~よさこい~', prefix: '2' },
-    { id: '3', title: '三年生', subtitle: '~演劇~', prefix: '3' }
-  ];
+  const sections = useMemo(() => {
+    if (activeTab === 'JuniorHigh') {
+      return [
+        { id: '1', title: '一年生', subtitle: '~ プレゼンテーション ~', prefix: '1' },
+        { id: '2', title: '二年生', subtitle: '~ よさこい ~', prefix: '2' },
+        { id: '3', title: '三年生', subtitle: '~ 演劇 ~', prefix: '3' }
+      ];
+    }
+    return [
+      { id: '1', title: '一年生', subtitle: '~ クラス展示 ~', prefix: '1' },
+      { id: '2', title: '二年生', subtitle: '~ Atrium ・Co-Tan 発表 ~', prefix: '2' },
+      { id: '3', title: '三年生', subtitle: '~ Arena 発表 ~', prefix: '3' }
+    ];
+  }, [activeTab]);
 
   return (
     <>

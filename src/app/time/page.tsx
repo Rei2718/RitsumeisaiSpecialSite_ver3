@@ -38,10 +38,10 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
         </p>
 
         {/* 前日に消す。下の要素のBlurも忘れずに */}
-        <div className='flex items-center justify-center animate-pulse'>CommingSoon...</div>
+        <div className='flex items-center justify-center animate-pulse'>注 : 立命祭は20,21日開催です</div>
         
         {activeEvents.map((activeItem) => (
-          <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse blur-sm">
+          <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse">
             <div className="flex gap-x-2 relative group rounded-lg justify-center">
               <div className="flex items-center justify-center">
                 <button type="button" className="text-left relative z-10 inline-flex items-center gap-x-1 text-xs rounded-lg border border-transparent font-semibold">
