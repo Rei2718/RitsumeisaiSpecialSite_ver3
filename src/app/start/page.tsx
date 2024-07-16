@@ -86,62 +86,64 @@ export default function Start() {
   };
 
   return (
-    <div className="w-screen h-screen fixed top-0 left-0 overflow-hidden z-[60]">
-      <StartBackground />
-      {sections.map((section) => (
-        <Transition
-          key={section.id}
-          show={currentSection === section.id}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          as="div"
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
-            {section.content}
-          </div>
-        </Transition>
-      ))}
-      {currentSection !== 1 && currentSection !== 5 && (
-        <Transition
-          show={showNextButton}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          as="div"
-          className="fixed bottom-4 right-4"
-        >
-          <button onClick={handleNext} className="p-2">
-            NEXT
-          </button>
-        </Transition>
-      )}
-      {currentSection === 5 && (
-        <Transition
-          show={showFinButton}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          as="div"
-          className="fixed bottom-4 right-4"
-        >
-          <button onClick={handleFin} className={`p-2 ${isFinishing ? "opacity-0 transition-opacity duration-500" : ""}`}>
-            Fin
-          </button>
-        </Transition>
-      )}
-      <audio ref={audioRef} src="/music.mp3" loop style={{ display: "none" }} />
-    </div>
+    <>
+      <StartBackground/>
+      <div className="w-screen h-screen fixed top-0 left-0 overflow-hidden z-[60]">
+        {sections.map((section) => (
+          <Transition
+            key={section.id}
+            show={currentSection === section.id}
+            enter="transition-opacity duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            as="div"
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
+              {section.content}
+            </div>
+          </Transition>
+        ))}
+        {currentSection !== 1 && currentSection !== 5 && (
+          <Transition
+            show={showNextButton}
+            enter="transition-opacity duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            as="div"
+            className="fixed bottom-4 right-4"
+          >
+            <button onClick={handleNext} className="p-2">
+              NEXT
+            </button>
+          </Transition>
+        )}
+        {currentSection === 5 && (
+          <Transition
+            show={showFinButton}
+            enter="transition-opacity duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            as="div"
+            className="fixed bottom-4 right-4"
+          >
+            <button onClick={handleFin} className={`p-2 ${isFinishing ? "opacity-0 transition-opacity duration-500" : ""}`}>
+              Fin
+            </button>
+          </Transition>
+        )}
+        <audio ref={audioRef} src="/music.mp3" loop style={{ display: "none" }} />
+      </div>
+    </>
   );
 }
 
@@ -410,7 +412,7 @@ const StartBackground = () => {
 
   return (
     <>
-      <div className='w-screen h-screen fixed top-0 left-0 z-0'>
+      <div className='w-screen h-screen fixed top-0 left-0 z-[50]'>
         <div className='' style={{ backgroundColor: colors[0], filter: 'blur(100px)' }}>
           <section id='top' className='left-0 h-[80vh] w-[80vh] rounded-full fixed' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
           <section id='down' className='fixed h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
