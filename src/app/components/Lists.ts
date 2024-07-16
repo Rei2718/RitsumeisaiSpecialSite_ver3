@@ -167,7 +167,7 @@ export interface ListItem {
       time1: "常設",
       time2:"常設",
       location: "3-B",
-      img: "/NO.webp",
+      img: "/1C.webp",
       description: " 2つの関門を突破して、フォトスポットに辿り着き、メイドさんと写真を撮ろう！"
     },
     {
@@ -197,7 +197,7 @@ export interface ListItem {
       time1: "常設",
       time2:"常設",
       location: "3-C",
-      img: "/NO.webp",
+      img: "/1F.webp",
       description: "恐怖×恐怖×「変」一本の通り道を突き進み、変になった教室を堪能せよ！"
     },
     {
@@ -207,7 +207,7 @@ export interface ListItem {
       time1: "常設",
       time2:"常設",
       location: "3-A",
-      img: "/NO.webp",
+      img: "/1G.webp",
       description: "元人間のペットのちいこわが大量虐殺。復讐を企むちいこわ達から、見事逃げ切れるか？"
     },
     {
@@ -227,7 +227,7 @@ export interface ListItem {
       time1: "常設",
       time2:"常設",
       location: "3-G",
-      img: "/NO.webp",
+      img: "/1I.webp",
       description: "体内にスリップして、人体の働きが見える世界線を体験できる脱出ゲーム！ぜひ来てね！"
     },
     {
@@ -268,7 +268,7 @@ export interface ListItem {
       time2:'12:30',
       location: "Atrium",
       img: "/NO.webp",
-      description: " D組の企画はゴッドタレント！それぞれの個性が集まった発表をぜひお楽しみください！"
+      description: " D組の企画はゴッドタレント! それぞれの個性が集まった発表をぜひお楽しみください !"
     },
     {
       id: 's2_5',
@@ -277,7 +277,7 @@ export interface ListItem {
       time1: "12:40",
       time2:"9:00",
       location: "Co-Tan",
-      img: "/NO.webp",
+      img: "/2E.webp",
       description: "伝説のツッパリたちが、立命館に降臨⁉ 個性豊かな仲間たちがコタンで大暴れ!"
     },
     {
@@ -287,7 +287,7 @@ export interface ListItem {
       time1: "14:05",
       time2:"11:40",
       location: "Atrium",
-      img: "/NO.webp",
+      img: "/2F.webp",
       description: "時を飛び越えて仲直り?!素直になれない2人で紡ぐ、友情の物語ーーー"
     },
     {
@@ -307,7 +307,7 @@ export interface ListItem {
       time1: "11:00",
       time2:"10:40",
       location: "Co-Tan",
-      img: "/NO.webp",
+      img: "/2H.webp",
       description: "「たぶんまた消されたんだよ、コスモスに」ある夏のちょっと変わった物語。"
     },
     {
@@ -387,7 +387,7 @@ export interface ListItem {
       time1: "15:00",
       time2:"9:00",
       location: "Arena",
-      img: "/NO.webp",
+      img: "/3G.webp",
       description: "アイドルに憧れる桃花の元にもう一人の自分が現れ、アイドルグループを組むが、、"
     },
     {
@@ -397,7 +397,7 @@ export interface ListItem {
       time1: "11:30",
       time2:"12:30",
       location: "Arena",
-      img: "/NO.webp",
+      img: "/3H.webp",
       description: "「H 型の血はあと一つしか...!」 避けられない命の選択。彼らの結末は、アナタの手に。"
     },
     {
