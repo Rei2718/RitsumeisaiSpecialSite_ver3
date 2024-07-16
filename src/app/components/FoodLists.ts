@@ -125,7 +125,7 @@ export interface MenuItem {
         id: 'f10',
         store: 'おやRITS',
         title: '激うまフランクフルト',
-        img: '/fNO.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
           { name: 'フランクフルト', price: '￥-', img: '/NO.webp' },
