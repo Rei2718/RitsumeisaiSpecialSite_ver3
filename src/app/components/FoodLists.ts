@@ -31,12 +31,12 @@ export interface MenuItem {
       id: 'f2',
       store: 'Big mams pie',
       title: 'パイ各種/ソーセージロール',
-      img: '/foods/f2/1.webp',
+      img: '/NO.webp',
       description: 'NoDescription',
       menus: [
-        { name: 'パイ各種(主食系)', price: '￥300 ~ 350', img: '/foods/f2/1.webp' },
-        { name: 'パイ各種(デザート系)', price: '￥250 ~ 300', img: '/foods/f2/1.webp' },
-        { name: 'ソーセージロール', price: '￥500', img: '/foods/f2/1.webp' },
+        { name: 'パイ各種(主食系)', price: '￥300 ~ 350', img: '/NO.webp' },
+        { name: 'パイ各種(デザート系)', price: '￥250 ~ 300', img: '/NO.webp' },
+        { name: 'ソーセージロール', price: '￥500', img: '/NO.webp' },
       ]
     },
     {
@@ -66,69 +66,69 @@ export interface MenuItem {
         id: 'f5',
         store: 'エルフグリーン',
         title: 'ポップコーン',
-        img: '/foods/f5/1.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: 'ポップコーン', price: '￥-', img: '/foods/f5/1.webp' },
+          { name: 'ポップコーン', price: '￥-', img: '/NO.webp' },
         ]
       },
       {
         id: 'f6',
         store: 'ハルキッチン',
         title: '肉まきおにぎり/けずりいちご/その他 ...',
-        img: '/foods/f6/1.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: 'けずりいちご', price: '￥600', img: '/foods/f6/1.webp' },
-          { name: 'チョコバナナ', price: '￥300', img: '/foods/f6/1.webp' },
-          { name: '肉巻きおにぎり', price: '￥700', img: '/foods/f6/1.webp' },
+          { name: 'けずりいちご', price: '￥600', img: '/NO.webp' },
+          { name: 'チョコバナナ', price: '￥300', img: '/NO.webp' },
+          { name: '肉巻きおにぎり', price: '￥700', img: '/NO.webp' },
         ]
       },
       {
         id: 'f7',
         store: 'パンジ',
         title: 'チュロス/かき氷',
-        img: '/foods/f7/1.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: 'かき氷', price: '￥300', img: '/foods/f7/1.webp' },
-          { name: 'チュロス', price: '￥400', img: '/foods/f7/1.webp' },
+          { name: 'かき氷', price: '￥300', img: '/NO.webp' },
+          { name: 'チュロス', price: '￥400', img: '/NO.webp' },
         ]
       },
       {
         id: 'f8',
         store: 'es キッチン',
         title: 'ジンギスカン焼うどん/ロングポテト/その他 ...',
-        img: '/foods/f8/1.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: 'アメリカンドッグ', price: '￥350', img: '/foods/f8/1.webp' },
-          { name: 'ロングポテト', price: '￥600 ~', img: '/foods/f8/1.webp' },
-          { name: 'サツマイモチップ', price: '￥500', img: '/foods/f8/1.webp' },
-          { name: 'イチゴシェイク', price: '￥500', img: '/foods/f8/1.webp' },
-          { name: 'たこ焼き', price: '￥600 ~', img: '/foods/f8/1.webp' },
-          { name: 'ジンギスカン焼うどん', price: '￥800 ~', img: '/foods/f8/1.webp' },
+          { name: 'アメリカンドッグ', price: '￥350', img: '/NO.webp' },
+          { name: 'ロングポテト', price: '￥600 ~', img: '/NO.webp' },
+          { name: 'サツマイモチップ', price: '￥500', img: '/NO.webp' },
+          { name: 'イチゴシェイク', price: '￥500', img: '/NO.webp' },
+          { name: 'たこ焼き', price: '￥600 ~', img: '/NO.webp' },
+          { name: 'ジンギスカン焼うどん', price: '￥800 ~', img: '/NO.webp' },
         ]
       },
       {
         id: 'f9',
         store: 'sugar garden',
         title: 'ザンギ/焼きそば',
-        img: '/foods/f9/1.webp',
+        img: '/NO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: '焼きそば', price: '￥400', img: '/foods/f8/1.webp' },
-          { name: 'ザンギ', price: '￥600', img: '/foods/f8/1.webp' },
+          { name: '焼きそば', price: '￥400', img: '/NO.webp' },
+          { name: 'ザンギ', price: '￥600', img: '/NO.webp' },
         ]
       },
       {
         id: 'f10',
         store: 'おやじの会',
         title: '激うまフランクフルト',
-        img: '/foods/f10/1.webp',
+        img: '/fNO.webp',
         description: 'NoDescruption',
         menus: [
-          { name: 'フランクフルト', price: '￥-', img: '/foods/f10/1.webp' },
+          { name: 'フランクフルト', price: '￥-', img: '/NO.webp' },
         ]
       },
   ];
