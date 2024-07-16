@@ -10,6 +10,7 @@ export default function SplashScreen() {
             </div>
             <div className="animate-pulse text-center">
               <div className="text-[#81d8d0] text-lg">Loading...</div>
+              <div className="text-[#81d8d0] text-sm">※スマホでの使用を想定しています</div>
             </div>
         </div>
     );
