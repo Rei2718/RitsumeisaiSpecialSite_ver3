@@ -224,7 +224,7 @@ function Section2() {
           as="div"
         >
           <h1 className="text-3xl absolute top-[25vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
-            This year's theme is...
+            This years theme is...
           </h1>
         </Transition>
       </div>
