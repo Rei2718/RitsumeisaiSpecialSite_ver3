@@ -5,6 +5,7 @@ import { Transition } from "@headlessui/react";
 import Noise from "../components/Noise";
 import { FaHeadphones } from "react-icons/fa";
 import { Londrina_Shadow } from "next/font/google";
+import { useColorPreset } from "../components/ColorPresetContext";
 
 const londrinaShadow = Londrina_Shadow({
   weight: "400",
@@ -404,16 +405,68 @@ function Section5() {
   );
 }
 
-function StartBackground() {
+const StartBackground = () => {
+  const { colors } = useColorPreset();
+
   return (
     <>
-      <div className='w-screen h-screen fixed top-0 left-0 z-0 bg-[#eae5c9]'>
-        <section id='top' className='left-0 h-[70vh] w-[70vh] rounded-full fixed bg-gradient-to-r from-[#eae5c9] to-[#4ca9df] blur-[100px]'></section>
-        <section id='down' className='fixed h-[40vh] w-[40vh] rounded-full bg-gradient-to-r from-[#eae5c9] to-[#4ca9df] blur-[100px]'></section>
-        <section id='right' className='right-0 fixed h-[50vh] w-[50vh] rounded-full bg-gradient-to-b from-[#4ca9df] to-[#eae5c9] blur-[100px]'></section>
-        <section id='left' className='fixed left-0 bottom-0 h-[60vh] w-[60vh] rounded-full bg-gradient-to-b from-[#4ca9df] to-[#eae5c9] blur-[100px]'></section>
+      <div className='w-screen h-screen fixed top-0 left-0 z-0'>
+        <div className='' style={{ backgroundColor: colors[0], filter: 'blur(100px)' }}>
+          <section id='top' className='left-0 h-[80vh] w-[80vh] rounded-full fixed' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+          <section id='down' className='fixed h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+          <section id='right' className='right-0 fixed h-[60vh] w-[60vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+          <section id='left' className='fixed left-0 bottom-0 h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+        </div>
         <Noise />
+        <div className='fixed top-0 left-0 w-full h-full z-20 flex justify-between'>
+          <SideTypography position="left" text="RITSUMEIKAN KEISHO" />
+          <SideTypography position="right" text="RITSUMEIKAN KEISHO" />
+        </div>
       </div>
     </>
   );
-}
+};
+
+type SideTypographyProps = {
+  position: 'left' | 'right';
+  text: string;
+};
+
+const SideTypography = ({ position, text }: SideTypographyProps) => (
+  <div className={`flex flex-col justify-between items-center py-24 ${position === 'left' ? 'pl-2' : 'pr-2'} w-[30px]`}>
+    {position === 'left' && (
+      <>
+        <SideDots />
+        <VerticalLine />
+        <span className='text-sm transform -rotate-90 my-16 whitespace-nowrap text-white'>{text}</span>
+        <SideDots />
+      </>
+    )}
+    {position === 'right' && (
+      <>
+        <span className='text-sm transform rotate-90 my-16 whitespace-nowrap text-white'>{text}</span>
+        <SideDots />
+        <VerticalLine />
+        <SideDots />
+      </>
+    )}
+  </div>
+);
+
+const SideDots = () => (
+  <div className='flex flex-col items-center'>
+    <div className='h-1.5 w-1.5 bg-white rounded-full mb-2'></div>
+    <div className='h-1.5 w-1.5 bg-white rounded-full mb-2'></div>
+    <div className='h-1.5 w-1.5 bg-white rounded-full'></div>
+  </div>
+);
+
+const VerticalLine = () => <div className='h-32 w-[0.05rem] bg-white'></div>;
+
+type StickyNavbarProps = {
+  toggleMenu: () => void;
+  handleLinkClick: (href: string) => void;
+  selectedIcon: string;
+  isSpecialPage: () => boolean;
+  setSelectedIcon: Dispatch<SetStateAction<string>>;
+};
