@@ -211,8 +211,8 @@ function Section2() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
-      <div className="w-10/12 text-center">
+    <div className="flex flex-col items-center justify-center h-full w-full">
+      <div className="text-center">
         <Transition
           show={showTopText}
           enter="transition-opacity duration-500"
@@ -221,11 +221,14 @@ function Section2() {
           leave="transition-opacity duration-500"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
+          as="div"
         >
-          <h1 className="text-3xl">This year&apos;s theme is...</h1>
+          <h1 className="text-3xl absolute top-[25vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
+            This year's theme is...
+          </h1>
         </Transition>
       </div>
-      <div className="w-10/12 text-center">
+      <div className="text-center">
         <Transition
           show={showBottomText}
           enter="transition-opacity duration-500"
@@ -234,15 +237,16 @@ function Section2() {
           leave="transition-opacity duration-500"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
+          as="div"
         >
-          <h1 className="text-8xl">
+          <h1 className="text-8xl absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
             <div className={londrinaShadow.className}>
               Parallel World
             </div>
           </h1>
         </Transition>
       </div>
-      <div className="w-10/12 text-center">
+      <div className="text-center">
         <Transition
           show={showBottomText}
           enter="transition-opacity duration-500"
@@ -251,14 +255,15 @@ function Section2() {
           leave="transition-opacity duration-500"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
+          as="div"
         >
-          <h1 className="text-sm">
+          <h1 className="text-sm absolute top-[75vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
             「Parallel World」は選択の連鎖が生む現実の多様性を探求します。無数の「もしも」が織りなす可能性の世界を、想像力で紡ぎ出し、存在の奥深さを体感する。私たちの選択が生み出す無限の世界線を、創造の翼で飛翔しましょう。
           </h1>
         </Transition>
       </div>
     </div>
-  );
+  );  
 }
 
 function Section3() {
@@ -285,7 +290,7 @@ function Section3() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
-      <div className="w-10/12 text-center">
+      <div className="text-center">
         <Transition
           show={showTopText}
           enter="transition-opacity duration-500"
@@ -294,21 +299,11 @@ function Section3() {
           leave="transition-opacity duration-500"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
+          as="div"
         >
-          <h1 className="text-3xl">菊地 賢司</h1>
-        </Transition>
-      </div>
-      <div className="w-10/12 text-center">
-        <Transition
-          show={showBottomText}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="text-sm">
+          <h1 className="text-3xl py-4">写真とか</h1>
+          <h1 className="text-3xl py-4">菊地 賢司</h1>
+          <div className="text-sm max-w-xl py-4">
             お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
           </div>
         </Transition>
@@ -340,29 +335,25 @@ function Section4() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4">
-      <Transition
-        show={showTopText}
-        enter="transition-opacity duration-500"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <h1 className="text-3xl absolute top-[17rem]">注意事項等</h1>
-      </Transition>
-      <Transition 
-        show={showBottomText}
-        enter="transition-opacity duration-500"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <h1 className="text-3xl absolute">Here is Section4</h1>
-      </Transition>
+    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
+      <div className="text-center">
+        <Transition
+          show={showTopText}
+          enter="transition-opacity duration-500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+          as="div"
+        >
+          <h1 className="text-3xl py-4">写真とか</h1>
+          <h1 className="text-3xl py-4">菊地 賢司</h1>
+          <div className="text-sm max-w-xl py-4">
+            お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
+          </div>
+        </Transition>
+      </div>
     </div>
   );
 }
@@ -390,29 +381,25 @@ function Section5() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4">
-      <Transition
-        show={showTopText}
-        enter="transition-opacity duration-500"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <h1 className="text-3xl absolute top-[17rem]">制作クレジット</h1>
-      </Transition>
-      <Transition
-        show={showBottomText}
-        enter="transition-opacity duration-500"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <h1 className="text-3xl absolute">Here is Section5</h1>
-      </Transition>
+    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
+      <div className="text-center">
+        <Transition
+          show={showTopText}
+          enter="transition-opacity duration-500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+          as="div"
+        >
+          <h1 className="text-3xl py-4">写真とか</h1>
+          <h1 className="text-3xl py-4">菊地 賢司</h1>
+          <div className="text-sm max-w-xl py-4">
+            お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
+          </div>
+        </Transition>
+      </div>
     </div>
   );
 }
