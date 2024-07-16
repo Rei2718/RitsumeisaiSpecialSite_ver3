@@ -123,7 +123,7 @@ export interface MenuItem {
       },
       {
         id: 'f10',
-        store: 'おやじの会',
+        store: 'おやRITS',
         title: '激うまフランクフルト',
         img: '/fNO.webp',
         description: 'NoDescruption',
