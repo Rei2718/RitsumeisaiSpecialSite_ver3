@@ -907,7 +907,7 @@ export interface ListItem {
     },
     {
       id: 'f10',
-      name: 'おやじの会',
+      name: 'おやRITS',
       title: '激うまフランクフルト',
       time1: "",
       time2: "",
