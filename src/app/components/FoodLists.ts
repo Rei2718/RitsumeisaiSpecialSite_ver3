@@ -71,11 +71,11 @@ export const Lists: ListItem[] = [
       id: 'f5',
       store: 'ViVi POPCORN',
       location: '',
-      title: 'ソルトポップコーン',
-      img: '/NO.webp',
+      title: 'ポップコーン',
+      img: '/F5/1.webp',
       description: 'NoDescruption',
       menus: [
-        { name: 'ポップコーン', price: '￥200', img: '/NO.webp' },
+        { name: 'ソルトポップコーン', price: '￥200', img: '/F5/1.webp' },
       ]
     },
     {
