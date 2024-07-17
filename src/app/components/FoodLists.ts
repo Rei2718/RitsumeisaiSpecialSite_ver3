@@ -136,10 +136,10 @@ export const Lists: ListItem[] = [
       store: 'おやRITS',
       location: '',
       title: '激うまフランクフルト',
-      img: '/NO.webp',
+      img: '/F10/1.webp',
       description: 'NoDescruption',
       menus: [
-        { name: '激うまフランクフルト', price: '￥200', img: '/NO.webp' },
+        { name: '激うまフランクフルト', price: '￥200', img: '/F10/1.webp' },
       ]
     },
 ];

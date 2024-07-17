@@ -6,6 +6,14 @@ import Noise from "../components/Noise";
 import { FaHeadphones } from "react-icons/fa";
 import { Londrina_Shadow } from "next/font/google";
 import { useColorPreset } from "../components/ColorPresetContext";
+import Image from "next/image";
+
+import { RiHome2Line } from "react-icons/ri";
+import { FiClock } from "react-icons/fi";
+import { MdOutlineFastfood } from "react-icons/md";
+import { BsPeople } from "react-icons/bs";
+import { HiOutlineBars3BottomRight } from "react-icons/hi2";
+const ICON_SIZE = "w-6 h-6";
 
 const londrinaShadow = Londrina_Shadow({
   weight: "400",
@@ -87,7 +95,7 @@ export default function Start() {
 
   return (
     <>
-      <StartBackground/>
+      <StartBackground />
       <div className="w-screen h-screen fixed top-0 left-0 overflow-hidden z-[60]">
         {sections.map((section) => (
           <Transition
@@ -119,7 +127,7 @@ export default function Start() {
             as="div"
             className="fixed bottom-4 right-4"
           >
-            <button onClick={handleNext} className="p-2">
+            <button onClick={handleNext} className="p-2 text-xl">
               NEXT
             </button>
           </Transition>
@@ -136,7 +144,7 @@ export default function Start() {
             as="div"
             className="fixed bottom-4 right-4"
           >
-            <button onClick={handleFin} className={`p-2 ${isFinishing ? "opacity-0 transition-opacity duration-500" : ""}`}>
+            <button onClick={handleFin} className={`p-2 text-xl ${isFinishing ? "opacity-0 transition-opacity duration-500" : ""}`}>
               Fin
             </button>
           </Transition>
@@ -215,21 +223,8 @@ function Section2() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full w-full">
-      <div className="text-center">
-        <Transition
-          show={showTopText}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          as="div"
-        >
-          <h1 className="text-3xl absolute top-[25vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
-            This years theme is...
-          </h1>
-        </Transition>
+      <div className="absolute inset-0 flex items-center justify-center -z-10 floating">
+        <Image src="/svg/globe.svg" alt="Background Image" width={500} height={500} className="w-11/12 h-auto max-w-xl opacity-40 transform" />
       </div>
       <div className="text-center">
         <Transition
@@ -242,31 +237,23 @@ function Section2() {
           leaveTo="opacity-0"
           as="div"
         >
-          <h1 className="text-8xl absolute top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
-            <div className={londrinaShadow.className}>
-              Parallel World
+          <div className=" relative lflex justify-center items-center w-10/12 mx-auto max-w-xl">
+            <div className="text-2xl">
+              今年の立命祭のテーマは...
             </div>
-          </h1>
-        </Transition>
-      </div>
-      <div className="text-center">
-        <Transition
-          show={showBottomText}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          as="div"
-        >
-          <h1 className="text-sm absolute top-[75vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
-            「Parallel World」は選択の連鎖が生む現実の多様性を探求します。無数の「もしも」が織りなす可能性の世界を、想像力で紡ぎ出し、存在の奥深さを体感する。私たちの選択が生み出す無限の世界線を、創造の翼で飛翔しましょう。
-          </h1>
+            <div className="text-8xl pt-2">
+              <div className={londrinaShadow.className}>
+                Parallel World
+              </div>
+            </div>
+            <h1 className="text-base pt-2">
+              「Parallel World」は選択の連鎖が生む現実の多様性を探求します。無数の「もしも」が織りなす可能性の世界を、想像力で紡ぎ出し、存在の奥深さを体感する。私たちの選択が生み出す無限の世界線を、創造の翼で飛翔しましょう。
+            </h1>
+          </div>
         </Transition>
       </div>
     </div>
-  );  
+  );
 }
 
 function Section3() {
@@ -291,8 +278,10 @@ function Section3() {
     };
   }, []);
 
+  const { colors } = useColorPreset();
+
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
+    <div className="flex flex-col items-center justify-center h-screen w-full space-y-4 relative">
       <div className="text-center">
         <Transition
           show={showTopText}
@@ -304,14 +293,54 @@ function Section3() {
           leaveTo="opacity-0"
           as="div"
         >
-          <h1 className="text-3xl py-4">写真とか</h1>
-          <h1 className="text-3xl py-4">菊地 賢司</h1>
-          <div className="text-sm max-w-xl py-4">
-            お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-center">
+              <div>
+                <h1 className="text-3xl relative left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 max-w-xl">
+                  Getting Started with Our Site
+                  <p className="text-base pt-2">~ 特設サイトガイド ~</p>
+                </h1>
+                <div className="text-lg space-y-2 text-center">
+                  <p>HOME : アクティブイベント一覧</p>
+                  <p>TIME : 場所ごとのタイムライン</p>
+                  <p>CLASS : 各クラス企画概要</p>
+                  <p>FOOD : キッチンカー等概要</p>
+                  <p>MENU : バスダイヤ等</p>
+                </div>
+                <div className="text-3xl py-4">↓</div>
+              </div>
+            </div>
+
+            {/* Navigation Bar */}
+            <div className="sticky-navbar top-[80vh] fixed left-2 right-2 transform translate-x-0 w-auto max-w-xl mx-auto z-50 backdrop-filter backdrop-blur-sm shadow-md rounded-full flex justify-center items-center p-1.5 animate-bounce" style={{ backgroundColor: colors[2] }}>
+              <div className="w-full flex justify-around">
+                <div className="flex flex-col items-center">
+                  <RiHome2Line className={ICON_SIZE} />
+                  <span className="text-[10px]">HOME</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FiClock className={ICON_SIZE} />
+                  <span className="text-[10px]">TIME</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <MdOutlineFastfood className={ICON_SIZE} />
+                  <span className="text-[10px]">FOOD</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <BsPeople className={ICON_SIZE} />
+                  <span className="text-[10px]">CLASS</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <HiOutlineBars3BottomRight className={ICON_SIZE} />
+                  <span className="text-[10px]">MENU</span>
+                </div>
+              </div>
+            </div>
           </div>
         </Transition>
       </div>
     </div>
+
   );
 }
 
@@ -334,11 +363,11 @@ function Section4() {
     return () => {
       clearTimeout(topTextTimer);
       clearTimeout(bottomTextTimer);
-    };    
+    };
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
+    <div className="flex flex-col items-center justify-center h-screen w-full space-y-4 relative">
       <div className="text-center">
         <Transition
           show={showTopText}
@@ -350,10 +379,39 @@ function Section4() {
           leaveTo="opacity-0"
           as="div"
         >
-          <h1 className="text-3xl py-4">写真とか</h1>
-          <h1 className="text-3xl py-4">菊地 賢司</h1>
-          <div className="text-sm max-w-xl py-4">
-            お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
+          <div className="p-4 space-y-4 w-10/12 max-w-xl mx-auto">
+            <h1 className="text-3xl font-bold">~ 来場者の皆様へ ~</h1>
+            <div className="space-y-2">
+              <h2 className="text-lg font-semibold">休憩所のご案内</h2>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl p-4">
+                  <h3 className="text-lg font-bold">〇 飲食可</h3>
+                  <ul className="list-disc list-inside">
+                    <li>食堂(2F)</li>
+                    <li>サブアリーナ(1F)</li>
+                  </ul>
+                </div>
+                <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl p-4">
+                  <h3 className="text-lg font-bold">✕ 飲食不可</h3>
+                  <ul className="list-disc list-inside">
+                    <li>高スタ前(1F)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <p>昼食は、正面玄関前のキッチンカー、食堂をご利用ください。</p>
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-lg font-semibold">自由観覧（一般公開時間）はお守りください。</h2>
+              <ul className="list-disc list-inside text-center">
+                <li>7/20 : 1日目 11:00 〜 15:30</li>
+                <li>7/21 : 2日目 9:00 〜 13:30</li>
+              </ul>
+            </div>
+            <div className="space-y-2 underline underline-offset-4 text-red-500">
+              <p>一般来場者・保護者の方は、開祭式、閉祭式、有志発表をご観覧頂けません。</p>
+            </div>
           </div>
         </Transition>
       </div>
@@ -384,7 +442,7 @@ function Section5() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-4 relative">
+    <div className="flex flex-col items-center justify-center h-screen w-full space-y-4 relative">
       <div className="text-center">
         <Transition
           show={showTopText}
@@ -396,10 +454,44 @@ function Section5() {
           leaveTo="opacity-0"
           as="div"
         >
-          <h1 className="text-3xl py-4">写真とか</h1>
-          <h1 className="text-3xl py-4">菊地 賢司</h1>
-          <div className="text-sm max-w-xl py-4">
-            お互いの違い、個性、そしてそれぞれの多様性を尊重し、認め合える場所、そんな唯一無二の学校である立命館慶祥で、一緒に「世界に通用する18歳」を目指しましょう。
+          <p className="text-3xl">~ Website Credits ~</p>
+          <div className="flex flex-col items-start space-y-2 mt-8">
+            <div className="flex items-center space-x-1">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <Image src="/start/Ichiro.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+              </div>
+              <span className="text-2xl">Ishikawa Ichiro</span>
+              <span>(Creator)</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <Image src="/NO.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+              </div>
+              <span className="text-2xl">Ochiai Masaya</span>
+              <span>(Data Manager)</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <Image src="/NO.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+              </div>
+              <span className="text-2xl">Ito Shido</span>
+              <span>(Special Thanks)</span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center text-center pt-8 space-y-4">
+            <p className="text-xl">Constructed with</p>
+            <div className="flex space-x-8">
+              <div className="flex justify-center items-center" style={{ width: 100, height: 50 }}>
+                <Image src="/start/vercel.png" alt="Vercel Logo" layout="intrinsic" width={100} height={50} objectFit="contain" />
+              </div>
+              <div className="flex justify-center items-center" style={{ width: 100, height: 50 }}>
+                <Image src="/start/nextjs.png" alt="Nextjs Logo" layout="intrinsic" width={150} height={50} objectFit="contain" />
+              </div>
+            </div>
+            <div className="pt-8">
+              <p className="text-xl">Music</p>
+              <p className="text-lg">Studio Kolomna</p>
+            </div>
           </div>
         </Transition>
       </div>
@@ -412,12 +504,12 @@ const StartBackground = () => {
 
   return (
     <>
-      <div className='w-screen h-screen fixed top-0 left-0 z-[50]'>
-        <div className='' style={{ backgroundColor: colors[0], filter: 'blur(100px)' }}>
-          <section id='top' className='left-0 h-[80vh] w-[80vh] rounded-full fixed' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='down' className='fixed h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='right' className='right-0 fixed h-[60vh] w-[60vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='left' className='fixed left-0 bottom-0 h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+      <div className='w-screen h-screen fixed top-0 left-0 z-50'>
+        <div className='relative w-full h-full' style={{ backgroundColor: colors[0], filter: 'blur(50px)' }}>
+          <section id='top' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='down' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='right' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='left' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
         </div>
         <Noise />
         <div className='fixed top-0 left-0 w-full h-full z-20 flex justify-between'>
@@ -462,13 +554,4 @@ const SideDots = () => (
     <div className='h-1.5 w-1.5 bg-white rounded-full'></div>
   </div>
 );
-
 const VerticalLine = () => <div className='h-32 w-[0.05rem] bg-white'></div>;
-
-type StickyNavbarProps = {
-  toggleMenu: () => void;
-  handleLinkClick: (href: string) => void;
-  selectedIcon: string;
-  isSpecialPage: () => boolean;
-  setSelectedIcon: Dispatch<SetStateAction<string>>;
-};

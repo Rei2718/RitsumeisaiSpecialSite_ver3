@@ -10,6 +10,7 @@ import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { BsPeople, BsFillPeopleFill } from "react-icons/bs";
 import { useColorPreset } from './ColorPresetContext';
 import Noise from './Noise';
+import ColorPresetSelector from './ColorPresetSelector';
 
 const ICON_SIZE = 'w-6 h-6';
 
@@ -207,8 +208,12 @@ const FullscreenMenu = ({ isOpen, toggleMenu, handleLinkClick, activeMenu, toggl
         <MenuItem onClick={() => { handleLinkClick('/time'); setSelectedIcon('/time'); }}>タイムテーブル</MenuItem>
         <MenuItem onClick={() => { handleLinkClick('/food'); setSelectedIcon('/food'); }}>フード</MenuItem>
         <MenuItem onClick={() => { handleLinkClick('/class'); setSelectedIcon('/class'); }}>クラス企画</MenuItem>
-        <MenuItem onClick={() => { handleLinkClick('/map'); setSelectedIcon('/map'); }}>マップ</MenuItem>
+        <MenuItem onClick={() => { handleLinkClick('/map'); setSelectedIcon('/map'); }}>バスダイヤ</MenuItem>
       </ul>
+      {/* SetButton */}
+      <div className="absolute inset-x-0 bottom-[12.5vh] w-9/12 max-w-md mx-auto z-10">
+        <ColorPresetSelector />
+      </div>
     </div>
   );
 };

@@ -912,7 +912,7 @@ export interface ListItem {
       time1: "",
       time2: "",
       location: "",
-      img: "/NO.webp",
+      img: "/F10/1.webp",
       description: "F10"
     },
     
