@@ -78,11 +78,11 @@ const KeyVisual = () => {
   return (
     <>
       <div className='w-screen h-screen fixed top-0 left-0 z-0'>
-        <div className='' style={{ backgroundColor: colors[0], filter: 'blur(100px)' }}>
-          <section id='top' className='left-0 h-[80vh] w-[80vh] rounded-full fixed' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='down' className='fixed h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='right' className='right-0 fixed h-[60vh] w-[60vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
-          <section id='left' className='fixed left-0 bottom-0 h-[70vh] w-[70vh] rounded-full' style={{ background: colors[1], filter: 'blur(110px)' }}></section>
+        <div className='relative w-full h-full' style={{ backgroundColor: colors[0], filter: 'blur(50px)' }}>
+          <section id='top' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='down' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='right' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
+          <section id='left' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
         </div>
         <Noise />
         <div className='fixed top-0 left-0 w-full h-full z-20 flex justify-between'>
@@ -93,6 +93,9 @@ const KeyVisual = () => {
     </>
   );
 };
+
+
+
 
 type SideTypographyProps = {
   position: 'left' | 'right';

@@ -2,66 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-.font_custom {
-  font-family: "Zen Maru Gothic", serif;
-  font-weight: 400;
-  font-style: normal;
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 200vh;
+  height: 200vh;
+  filter: blur(50px);
 }
-
-
 
 #top {
-  animation: down 25s infinite;
+  animation: moveDown 25s infinite;
+  top: -50vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@keyframes down {
+@keyframes moveDown {
   0%, 100% {
-    top: -60vh;
+    transform: translateY(0);
   }
   50% {
-    top: 240vh;
+    transform: translateY(150vh);
   }
 }
 
 #down {
-  animation: up 15s infinite;
+  animation: moveUp 15s infinite;
+  bottom: -50vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@keyframes up {
+@keyframes moveUp {
   0%, 100% {
-    left: -60vh;
+    transform: translateY(0);
   }
   50% {
-    left: 60vh;
+    transform: translateY(-150vh);
   }
 }
 
 #right {
-  animation: right 20s infinite;
+  animation: moveRight 20s infinite;
+  right: -50vh;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-@keyframes right {
+@keyframes moveRight {
   0%, 100% {
-    right: -60vh;
+    transform: translateX(0);
   }
   50% {
-    right: 180vh;
+    transform: translateX(-150vh);
   }
 }
 
 #left {
-  animation: left 10s infinite;
+  animation: moveLeft 10s infinite;
+  left: -50vh;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 
-@keyframes left {
+@keyframes moveLeft {
   0%, 100% {
-    left: 300vh;
+    transform: translateX(0);
   }
   50% {
-    left: 60vh;
+    transform: translateX(150vh);
   }
 }
-
 
 @keyframes float {
   0% {

@@ -20,30 +20,30 @@ const ColorPresetSelector = () => {
     switch (preset) {
       case 1:
         if (deviceType === "apple") {
-          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#E2F3F3']);
+          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#bde4e4']);
         } else {
-          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#DEF8F8']);
+          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#CDF4F4']);
         }
         break;
       case 2:
         if (deviceType === "apple") {
           setColors(['#FFE4AD', '#EA9AB2', '#F5CCCC', '#f6c8d8']);
         } else {
-          setColors(['#FFE4AD', '#F0A8C0', '#F5CCCC', '#F9DCE6']);
+          setColors(['#FFF1D6', '#F0A8C0', '#F5CCCC', '#F9DCE6']);
         }
         break;
       case 3:
         if (deviceType === "apple") {
           setColors(['#FFE4AD', '#0BEAAB', '#A8F0D8', '#a6ebcf']);
         } else {
-          setColors(['#FFE4AD', '#18F2C2', '#96EDD0', '#AAEEDF']);
+          setColors(['#FFF1D6', '#18F2C2', '#96EDD0', '#AAEEDF']);
         }
         break;
       default:
         if (deviceType === "apple") {
-          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#E2F3F3']);
+          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#bde4e4']);
         } else {
-          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#DEF8F8']);
+          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#CDF4F4']);
         }
     }
   };

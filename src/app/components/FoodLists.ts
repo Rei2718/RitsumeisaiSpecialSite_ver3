@@ -139,7 +139,7 @@ export const Lists: ListItem[] = [
       img: '/NO.webp',
       description: 'NoDescruption',
       menus: [
-        { name: 'フランクフルト', price: '￥-', img: '/NO.webp' },
+        { name: '激うまフランクフルト', price: '￥200', img: '/NO.webp' },
       ]
     },
 ];

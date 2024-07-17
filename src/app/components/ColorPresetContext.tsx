@@ -11,7 +11,7 @@ interface ColorPresetContextProps {
 const ColorPresetContext = createContext<ColorPresetContextProps | undefined>(undefined);
 
 export const ColorPresetProvider = ({ children }: { children: ReactNode }) => {
-  const [colors, setColorsState] = useState<string[]>(['#ffeac2', '#D9EEFC', '#aae1ce', '#CDF4F4']);
+  const [colors, setColorsState] = useState<string[]>(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#CDF4F4']);
 
   useEffect(() => {
     const savedColors = getColorPresetCookie();
