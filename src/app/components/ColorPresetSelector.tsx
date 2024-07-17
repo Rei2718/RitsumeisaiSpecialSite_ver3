@@ -20,9 +20,9 @@ const ColorPresetSelector = () => {
     switch (preset) {
       case 1:
         if (deviceType === "apple") {
-          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#bde4e4']);
+          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#E2F3F3']);
         } else {
-          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#CDF4F4']);
+          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#DEF8F8']);
         }
         break;
       case 2:
@@ -41,9 +41,9 @@ const ColorPresetSelector = () => {
         break;
       default:
         if (deviceType === "apple") {
-          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#bde4e4']);
+          setColors(['#FFE4AD', '#92c6f0', '#B4DEF8', '#E2F3F3']);
         } else {
-          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#CDF4F4']);
+          setColors(['#FFF1D6', '#C7E6FA', '#B4DEF8', '#DEF8F8']);
         }
     }
   };

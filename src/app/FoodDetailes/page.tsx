@@ -98,6 +98,11 @@ const FoodDetailsPage = () => {
               </div>
               <div className="text-left py-2">
                 <p className="text-lg">{selectedItem.title}</p>
+                <p className="text-base text-sky-400">
+                  <a href={selectedItem.location} className="underline">
+                    {selectedItem.location}
+                  </a>
+                </p>
               </div>
             </div>
             {/* Description Section */}
