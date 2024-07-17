@@ -19,7 +19,7 @@ const londrinaSolid = Londrina_Solid({
 function HomeContent() {
   return (
     <div className="relative z-10">
-      <section className="relative h-screen w-screen">
+      <section className="relative h-svh w-screen">
         <ActiveEventsList />
         
         {/* MainText */}
@@ -44,7 +44,7 @@ function HomeContent() {
         </div>
         
         {/* GetButton */}
-        <div className="absolute inset-x-0 bottom-[15svh] w-9/12 max-w-md mx-auto z-10">
+        <div className="absolute inset-x-0 bottom-[20svh] w-9/12 max-w-md mx-auto z-10">
           <Link href="/start">
             <button className="bg-white backdrop-filter backdrop-blur-sm shadow-md py-2 px-4 w-full text-base rounded-full">
               GET STARTED →

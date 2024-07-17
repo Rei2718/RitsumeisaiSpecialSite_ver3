@@ -96,7 +96,7 @@ export default function Start() {
   return (
     <>
       <StartBackground />
-      <div className="w-screen h-screen fixed top-0 left-0 overflow-hidden z-[60]">
+      <div className="w-screen h-svh fixed top-0 left-0 overflow-hidden z-[60]">
         {sections.map((section) => (
           <Transition
             key={section.id}
@@ -222,7 +222,7 @@ function Section2() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full">
+    <div className="flex flex-col items-center justify-center my-auto h-svh w-full">
       <div className="absolute inset-0 flex items-center justify-center -z-10 floating">
         <Image src="/svg/globe.svg" alt="Background Image" width={500} height={500} className="w-11/12 h-auto max-w-xl opacity-40 transform" />
       </div>
@@ -237,7 +237,7 @@ function Section2() {
           leaveTo="opacity-0"
           as="div"
         >
-          <div className=" relative lflex justify-center items-center w-10/12 mx-auto max-w-xl">
+          <div className="relative w-10/12 mx-auto max-w-xl">
             <div className="text-2xl">
               今年の立命祭のテーマは...
             </div>
@@ -281,7 +281,7 @@ function Section3() {
   const { colors } = useColorPreset();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full space-y-4 relative">
+    <div className="flex flex-col items-center justify-center my-auto h-svh w-full">
       <div className="text-center">
         <Transition
           show={showTopText}
@@ -312,7 +312,7 @@ function Section3() {
             </div>
 
             {/* Navigation Bar */}
-            <div className="sticky-navbar top-[80vh] fixed left-2 right-2 transform translate-x-0 w-auto max-w-xl mx-auto z-50 backdrop-filter backdrop-blur-sm shadow-md rounded-full flex justify-center items-center p-1.5 animate-bounce" style={{ backgroundColor: colors[2] }}>
+            <div className="sticky-navbar bottom-[10lvh] fixed left-2 right-2 transform translate-x-0 w-auto max-w-xl mx-auto z-50 backdrop-filter backdrop-blur-sm shadow-md rounded-full flex justify-center items-center p-1.5 animate-bounce" style={{ backgroundColor: colors[2] }}>
               <div className="w-full flex justify-around">
                 <div className="flex flex-col items-center">
                   <RiHome2Line className={ICON_SIZE} />
@@ -367,7 +367,7 @@ function Section4() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full space-y-4 relative">
+    <div className="flex flex-col items-center justify-center h-screen w-full relative my-auto">
       <div className="text-center">
         <Transition
           show={showTopText}
@@ -379,7 +379,7 @@ function Section4() {
           leaveTo="opacity-0"
           as="div"
         >
-          <div className="p-4 space-y-4 w-10/12 max-w-xl mx-auto">
+          <div className="p-4 w-10/12 max-w-xl mx-auto">
             <h1 className="text-3xl font-bold">~ 来場者の皆様へ ~</h1>
             <div className="space-y-2">
               <h2 className="text-lg font-semibold">休憩所のご案内</h2>
@@ -504,7 +504,7 @@ const StartBackground = () => {
 
   return (
     <>
-      <div className='w-screen h-screen fixed top-0 left-0 z-50'>
+      <div className='w-screen h-svh fixed top-0 left-0 z-50'>
         <div className='relative w-full h-full' style={{ backgroundColor: colors[0], filter: 'blur(50px)' }}>
           <section id='top' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
           <section id='down' className='circle' style={{ background: `radial-gradient(circle, ${colors[1]} 0%, rgba(255,255,255,0) 100%)` }}></section>
