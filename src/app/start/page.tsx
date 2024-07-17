@@ -482,7 +482,7 @@ function Section5() {
             <p className="text-xl">Constructed with</p>
             <div className="flex space-x-8">
               <div className="flex justify-center items-center" style={{ width: 100, height: 50 }}>
-                <Image src="/start/vercel.png" alt="Vercel Logo" layout="intrinsic" width={100} height={50} objectFit="contain" />
+                <Image src="/start/Vercel.png" alt="Vercel Logo" layout="intrinsic" width={100} height={50} objectFit="contain" />
               </div>
               <div className="flex justify-center items-center" style={{ width: 100, height: 50 }}>
                 <Image src="/start/nextjs.png" alt="Nextjs Logo" layout="intrinsic" width={150} height={50} objectFit="contain" />
