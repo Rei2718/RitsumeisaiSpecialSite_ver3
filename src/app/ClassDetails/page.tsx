@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams, useRouter } from 'next/navigation';
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Loading from '../loading';
 import { FiClock, FiMapPin } from 'react-icons/fi';
 import { IoArrowBackCircle } from 'react-icons/io5';
@@ -30,7 +30,7 @@ const ClassDetailsPage = () => {
 
   useEffect(() => {
     if (id) {
-      const filteredLists = lists.filter(item => item.id.startsWith('s') || item.id.startsWith('j'));
+      const filteredLists = lists.filter(item => item.id.startsWith('s') || item.id.startsWith('j') || item.id.startsWith('o'));
       const detail = filteredLists.find(item => item.id === id);
       setSelectedItem(detail || null);
 
@@ -68,15 +68,15 @@ const ClassDetailsPage = () => {
         </div>
 
         {/* Text Section */}
-        <div className="relative min-h-screen top-[3rem] z-10" style={{ background: `linear-gradient(to bottom, rgba(255, 255, 255, 0), ${colors[3]} 20rem)` }}>
+        <div className="relative min-h-screen top-0 z-10" style={{ background: `linear-gradient(to bottom, rgba(255, 255, 255, 0.3), ${colors[3]} 60rem, rgba(50, 50, 50, 1) 90rem)` }}>
           {/* Back Button */}
           <button 
-            className="relative -top-[3rem] text-[rgb(172,172,172)] rounded m-3 flex items-center"
+            className="absolute top-1 left-1 text-[rgb(255,255,255)] rounded m-3 flex items-center z-50"
             onClick={() => router.back()}
           >
             <IoArrowBackCircle className="h-8 w-8" />
           </button>
-          <div className='max-w-xl mx-auto w-11/12'>
+          <div className='max-w-xl mx-auto w-11/12 pt-16'>
             {/* Header Section */}
             <HeaderSection selectedItem={selectedItem} />
             {/* Time and Location Section */}
@@ -88,7 +88,34 @@ const ClassDetailsPage = () => {
           </div>
 
           {/* Thumbnails Section */}
-          <ThumbnailsSection randomItems={randomItems} handleThumbnailClick={handleThumbnailClick} />
+          <div className="pt-6">
+            <div className="flex justify-start text-center py-6 w-11/12 mx-auto">
+              <h1 className="text-2xl font-semibold">DISCOVER</h1>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-20 w-11/12 mx-auto">
+              {randomItems.map((item) => (
+                <div 
+                  key={item.id} 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
+                  onClick={() => handleThumbnailClick(item.id)}
+                >
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="object-cover w-full h-full rounded-t-xl"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className='font-bold'><span className={`${getColorByGrade(item.id)} rounded-md px-2 mr-2 pb-0.5 w-10 text-center`}>{item.name}</span>{item.title}</div>
+                    <p className="text-sm pt-2">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -167,10 +194,20 @@ const CautionSection: React.FC = () => (
   </div>
 );
 
+const getColorByGrade = (id: string) => {
+  if (id.startsWith('j1')) return 'bg-green-200';
+  if (id.startsWith('j2')) return 'bg-yellow-100';
+  if (id.startsWith('j3')) return 'bg-red-200';
+  if (id.startsWith('s1')) return 'bg-purple-200';
+  if (id.startsWith('s2')) return 'bg-sky-200';
+  if (id.startsWith('s3')) return 'bg-orange-200';
+  return 'bg-gray-200';
+};
+
 const ThumbnailsSection: React.FC<{ randomItems: any[], handleThumbnailClick: (id: string) => void }> = ({ randomItems, handleThumbnailClick }) => (
   <>
     <div className="flex justify-start text-center py-6 w-11/12 mx-auto">
-      <h2 className="text-lg font-semibold">DISCOVER</h2>
+      <h1 className="text-2xl font-semibold">DISCOVER</h1>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-20 w-11/12 mx-auto">
       {randomItems.map((item) => (
@@ -189,7 +226,7 @@ const ThumbnailsSection: React.FC<{ randomItems: any[], handleThumbnailClick: (i
             />
           </div>
           <div className="p-4">
-            <h3 className="font-bold text-lg">{item.title}</h3>
+            <div className='font-bold'><span className={`${getColorByGrade(item.id)} rounded-md px-2 mr-2 pb-0.5 w-10 text-center`}>{item.name}</span>{item.title}</div>
             <p className="text-sm pt-2">{item.description}</p>
           </div>
         </div>

@@ -8,7 +8,7 @@ import { useLists } from '../components/ListsContext';
 
 const Tab: React.FC<{ label: string; isActive: boolean; onClick: () => void; }> = ({ label, isActive, onClick }) => (
   <button
-    className={`relative my-1 transition-colors duration-300 ${isActive ? 'text-[rgb(50,50,50)] font-bold' : 'text-[rgb(50,50,50)]'}`}
+    className={`relative my-1 transition-colors duration-300 ${isActive ? 'font-bold animate-bounce' : ''}`}
     onClick={onClick}
   >
     {label}
@@ -32,7 +32,7 @@ const ClassList: React.FC<{ items: any[] }> = ({ items }) => (
               </div>
               <div className="flex-grow">
                 <h2 className="text-sm font-semibold break-words">{item.name}</h2>
-                <p className="text-xs pr-2 text-[rgb(50,50,50)]">{item.title}</p>
+                <p className="text-xs pr-2 ">{item.title}</p>
               </div>
               <div className="flex-shrink-0 text-center">
                 <h2 className="text-sm font-semibold">{item.time1}</h2>
@@ -47,9 +47,11 @@ const ClassList: React.FC<{ items: any[] }> = ({ items }) => (
 );
 
 const TabContents: React.FC<{ activeTab: string; items: any[] }> = ({ activeTab, items }) => {
-  const filteredItems = useMemo(() => items.filter(item => 
-    activeTab === 'JuniorHigh' ? item.id.startsWith('j') : item.id.startsWith('s')
-  ), [activeTab, items]);
+  const filteredItems = useMemo(() => items.filter(item => {
+    if (activeTab === 'JuniorHigh') return item.id.startsWith('j');
+    if (activeTab === 'SeniorHigh') return item.id.startsWith('s');
+    return item.id.startsWith('o');
+  }), [activeTab, items]);
 
   const sections = useMemo(() => {
     if (activeTab === 'JuniorHigh') {
@@ -59,10 +61,15 @@ const TabContents: React.FC<{ activeTab: string; items: any[] }> = ({ activeTab,
         { id: '3', title: '三年生', subtitle: '~ 演劇 ~', prefix: '3' }
       ];
     }
+    if (activeTab === 'SeniorHigh') {
+      return [
+        { id: '1', title: '一年生', subtitle: '~ クラス展示 ~', prefix: '1' },
+        { id: '2', title: '二年生', subtitle: '~ Atrium ・Co-Tan 発表 ~', prefix: '2' },
+        { id: '3', title: '三年生', subtitle: '~ Arena 発表 ~', prefix: '3' }
+      ];
+    }
     return [
-      { id: '1', title: '一年生', subtitle: '~ クラス展示 ~', prefix: '1' },
-      { id: '2', title: '二年生', subtitle: '~ Atrium ・Co-Tan 発表 ~', prefix: '2' },
-      { id: '3', title: '三年生', subtitle: '~ Arena 発表 ~', prefix: '3' }
+      { id: '1', title: 'その他', subtitle: '', prefix: '' }
     ];
   }, [activeTab]);
 
@@ -71,10 +78,10 @@ const TabContents: React.FC<{ activeTab: string; items: any[] }> = ({ activeTab,
       {sections.map(({ id, title, subtitle, prefix }) => (
         <React.Fragment key={id}>
           <div className="flex-shrink-0 text-center py-10">
-            <h1 className="text-2xl py-2 text-center">{activeTab === 'JuniorHigh' ? `中学${title}` : `高校${title}`}</h1>
+            <h1 className="text-2xl py-2 text-center">{activeTab === 'JuniorHigh' ? `中学${title}` : activeTab === 'SeniorHigh' ? `高校${title}` : `${title}`}</h1>
             <p className="text-base">{subtitle}</p>
           </div>
-          <ClassList items={filteredItems.filter(item => item.id.startsWith(activeTab === 'JuniorHigh' ? `j${prefix}` : `s${prefix}`))} />
+          <ClassList items={filteredItems.filter(item => item.id.startsWith(activeTab === 'Others' ? `o${prefix}` : `${activeTab.charAt(0).toLowerCase()}${prefix}`))} />
         </React.Fragment>
       ))}
     </>
@@ -87,8 +94,9 @@ const Class: React.FC = () => {
   const [activeTab, setActiveTab] = useState('SeniorHigh');
 
   const tabs = [
-    { id: 'SeniorHigh', label: 'SeniorHigh' },
-    { id: 'JuniorHigh', label: 'JuniorHigh' }
+    { id: 'SeniorHigh', label: '高校企画' },
+    { id: 'JuniorHigh', label: '中学企画' },
+    { id: 'Others', label: 'その他' }
   ];
 
   return (

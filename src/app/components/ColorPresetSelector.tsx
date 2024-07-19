@@ -60,7 +60,6 @@ const ColorPresetSelector = () => {
 
   return (
     <div className="preset-selector flex flex-col items-center space-y-4 bg-dark">
-      <p className="text-xs">イースターエッグ</p>
       <button 
         className="w-16 h-16 rounded-full transition duration-300 ease-in-out shadow-md bg-gradient-to-b from-white via-[#eae5c9] via-[2%] flex items-center justify-center"
         style={{ backgroundImage: `linear-gradient(to bottom, white, ${buttonColor})` }}
@@ -68,6 +67,7 @@ const ColorPresetSelector = () => {
       >
         {buttonText}
       </button>
+      <p className="text-xs">イースターエッグ</p>
     </div>
   );
 };

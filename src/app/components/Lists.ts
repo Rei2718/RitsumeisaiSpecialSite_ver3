@@ -146,7 +146,7 @@ export interface ListItem {
       title: 'もしも世界で唯一無二の韓国風プリが撮れたら?!',
       time1: "常設",
       time2:"常設",
-      location: "3-I",
+      location: "高校棟 1F 3-I",
       img: "/1A.webp",
       description: "こんなに可愛ちいのにモテないのなぁぜなぁぜ?盛って可愛く!韓国プリ!!"
     },
@@ -156,7 +156,7 @@ export interface ListItem {
       title: '感染教室',
       time1: "常設",
       time2:"常設",
-      location: "3-H",
+      location: "高校棟 1F 3-H",
       img: "/1B.webp",
       description: "「未知の感染症が流行した道内某高校。そこは廃校して以来足を踏み入れた者はいない…」"
     },
@@ -166,7 +166,7 @@ export interface ListItem {
       title: '千葉Cランド',
       time1: "常設",
       time2:"常設",
-      location: "3-B",
+      location: "高校棟 1F 3-B",
       img: "/1C.webp",
       description: " 2つの関門を突破して、フォトスポットに辿り着き、メイドさんと写真を撮ろう！"
     },
@@ -176,7 +176,7 @@ export interface ListItem {
       title: '1D教室がお化け屋敷になった世界線。',
       time1: "常設",
       time2:"常設",
-      location: "3-D",
+      location: "高校棟 1F 3-D",
       img: "/1D.webp",
       description: "絶叫必至！迷宮のお化け屋敷で未知の恐怖と対峙せよ！"
     },
@@ -186,7 +186,7 @@ export interface ListItem {
       title: 'ルEージマンションで～命をかけたサバイバルゲーム～',
       time1: "常設",
       time2:"常設",
-      location: "3-E",
+      location: "高校棟 1F 3-E",
       img: "/1E.webp",
       description: "ウイルスによってマンションにゾンビが出現!?あなたはここから生き延びられるか!"
     },
@@ -196,7 +196,7 @@ export interface ListItem {
       title: '変な教室',
       time1: "常設",
       time2:"常設",
-      location: "3-C",
+      location: "高校棟 1F 3-C",
       img: "/1F.webp",
       description: "恐怖×恐怖×「変」一本の通り道を突き進み、変になった教室を堪能せよ！"
     },
@@ -206,7 +206,7 @@ export interface ListItem {
       title: 'ちいこわ～ニンゲンさすまた討伐大作戦',
       time1: "常設",
       time2:"常設",
-      location: "3-A",
+      location: "高校棟 1F 3-A",
       img: "/1G.webp",
       description: "元人間のペットのちいこわが大量虐殺。復讐を企むちいこわ達から、見事逃げ切れるか？"
     },
@@ -216,7 +216,7 @@ export interface ListItem {
       title: '異国船を打ち払えー！壱のH鎖国中',
       time1: "常設",
       time2:"常設",
-      location: "3-F",
+      location: "高校棟 1F 3-F",
       img: "/1H.webp",
       description: "鎖国が続いていた世界で射的します！疾走感ある台車に乗り異国船を打ち払いましょう！"
     },
@@ -226,7 +226,7 @@ export interface ListItem {
       title: '',
       time1: "常設",
       time2:"常設",
-      location: "3-G",
+      location: "高校棟 1F 3-G",
       img: "/1I.webp",
       description: "体内にスリップして、人体の働きが見える世界線を体験できる脱出ゲーム！ぜひ来てね！"
     },
@@ -429,7 +429,7 @@ export interface ListItem {
 
     {
       id: 'p1',
-      name: '',
+      name: 'BP',
       title: '世界征服',
       time1: "13:30",
       time2: "",
@@ -439,7 +439,7 @@ export interface ListItem {
     },
     {
       id: 'p2',
-      name: '',
+      name: 'BP',
       title: 'Amulet',
       time1: "13:48",
       time2: "",
@@ -449,7 +449,7 @@ export interface ListItem {
     },
     {
       id: 'p3',
-      name: '',
+      name: 'BP',
       title: 'MORE×ROCK',
       time1: "13:58",
       time2: "",
@@ -459,7 +459,7 @@ export interface ListItem {
     },
     {
       id: 'p4',
-      name: '',
+      name: 'BP',
       title: 'Sleepy Nuts',
       time1: "14:16",
       time2: "",
@@ -469,7 +469,7 @@ export interface ListItem {
     },
     {
       id: 'p5',
-      name: '',
+      name: 'BP',
       title: 'Cardigan',
       time1: "14:29",
       time2: "",
@@ -479,7 +479,7 @@ export interface ListItem {
     },
     {
       id: 'p6',
-      name: '',
+      name: 'BP',
       title: '中学吹奏楽部',
       time1: "14:47",
       time2: "",
@@ -489,7 +489,7 @@ export interface ListItem {
     },
     {
       id: 'p7',
-      name: '',
+      name: 'BP',
       title: 'パートオブメモリー',
       time1: "",
       time2: "12:01",
@@ -499,7 +499,7 @@ export interface ListItem {
     },
     {
       id: 'p8',
-      name: '',
+      name: 'BP',
       title: 'アレテ',
       time1: "",
       time2: "11:43",
@@ -509,7 +509,7 @@ export interface ListItem {
     },
     {
       id: 'p9',
-      name: '',
+      name: 'BP',
       title: 'Scramble Dog',
       time1: "",
       time2: "11:30",
@@ -519,7 +519,7 @@ export interface ListItem {
     },
     {
       id: 'p10',
-      name: '',
+      name: 'BP',
       title: '緋色世界',
       time1: "",
       time2: "12:14",
@@ -529,7 +529,7 @@ export interface ListItem {
     },
     {
       id: 'p11',
-      name: '',
+      name: 'BP',
       title: 'TEEDA',
       time1: "",
       time2: "12:37",
@@ -539,7 +539,7 @@ export interface ListItem {
     },
     {
       id: 'p12',
-      name: '',
+      name: 'BP',
       title: '明星',
       time1: "",
       time2: "12:53",
@@ -549,7 +549,7 @@ export interface ListItem {
     },
     {
       id: 'p13',
-      name: '',
+      name: '有志',
       title: 'ツマラナイクマ',
       time1: "17:11",
       time2: "",
@@ -559,7 +559,7 @@ export interface ListItem {
     },
     {
       id: 'p14',
-      name: '',
+      name: '有志',
       title: 'King gyu',
       time1: "17:25",
       time2: "",
@@ -569,7 +569,7 @@ export interface ListItem {
     },
     {
       id: 'p15',
-      name: '',
+      name: '有志',
       title: 'Manёkin',
       time1: "17:04",
       time2: "",
@@ -579,7 +579,7 @@ export interface ListItem {
     },
     {
       id: 'p16',
-      name: '',
+      name: '有志',
       title: 'Vortex',
       time1: "17:31",
       time2: "",
@@ -589,7 +589,7 @@ export interface ListItem {
     },
     {
       id: 'p17',
-      name: '',
+      name: '有志',
       title: 'ZOMBI',
       time1: "17:18",
       time2: "",
@@ -599,7 +599,7 @@ export interface ListItem {
     },
     {
       id: 'p18',
-      name: '',
+      name: '有志',
       title: '楽器に叛逆せし者共',
       time1: "16:39",
       time2: "",
@@ -609,7 +609,7 @@ export interface ListItem {
     },
     {
       id: 'p19',
-      name: '',
+      name: '有志',
       title: '黒田煌弥',
       time1: "16:30",
       time2: "",
@@ -619,7 +619,7 @@ export interface ListItem {
     },
     {
       id: 'p20',
-      name: '',
+      name: '有志',
       title: '慶祥に歴史を刻もう ~ 500人有志企画 ~',
       time1: "17:38",
       time2: "",
@@ -629,7 +629,7 @@ export interface ListItem {
     },
     {
       id: 'p21',
-      name: '',
+      name: '有志',
       title: 'みりあ&慎之助',
       time1: "16:43",
       time2: "",
@@ -639,7 +639,7 @@ export interface ListItem {
     },
     {
       id: 'p22',
-      name: '',
+      name: '有志',
       title: 'Allons-y',
       time1: "16:44",
       time2: "",
@@ -649,7 +649,7 @@ export interface ListItem {
     },
     {
       id: 'p23',
-      name: '',
+      name: '有志',
       title: 'ぎゅうにゅう？',
       time1: "16:22",
       time2: "",
@@ -659,7 +659,7 @@ export interface ListItem {
     },
     {
       id: 'p24',
-      name: '',
+      name: '有志',
       title: '斎藤みりあ',
       time1: "16:49",
       time2: "",
@@ -669,7 +669,7 @@ export interface ListItem {
     },
     {
       id: 'p25',
-      name: '',
+      name: '有志',
       title: 'プロセカ同好会',
       time1: "16:17",
       time2: "",
@@ -679,7 +679,7 @@ export interface ListItem {
     },
     {
       id: 'p26',
-      name: '',
+      name: '有志',
       title: '本能寺の変',
       time1: "",
       time2: "",
@@ -689,7 +689,7 @@ export interface ListItem {
     },
     {
       id: 'p27',
-      name: '',
+      name: '有志',
       title: 'Etoile',
       time1: "16:08",
       time2: "",
@@ -699,7 +699,7 @@ export interface ListItem {
     },
     {
       id: 'p28',
-      name: '',
+      name: '有志',
       title: 'Fぐみのひと',
       time1: "16:35",
       time2: "",
@@ -709,7 +709,7 @@ export interface ListItem {
     },
     {
       id: 'p29',
-      name: '',
+      name: '有志',
       title: 'Monster Baby',
       time1: "16:25",
       time2: "",
@@ -719,7 +719,7 @@ export interface ListItem {
     },
     {
       id: 'p30',
-      name: '',
+      name: '有志',
       title: 'NiziU',
       time1: "16:04",
       time2: "",
@@ -729,7 +729,7 @@ export interface ListItem {
     },
     {
       id: 'p31',
-      name: '',
+      name: '有志',
       title: 'RYP',
       time1: "16:12",
       time2: "",
@@ -739,7 +739,7 @@ export interface ListItem {
     },
     {
       id: 'p32',
-      name: '',
+      name: '有志',
       title: 'Univers',
       time1: "16:25",
       time2: "",
@@ -749,7 +749,7 @@ export interface ListItem {
     },
     {
       id: 'p33',
-      name: '',
+      name: '有志',
       title: '高校吹奏楽部',
       time1: "15:45",
       time2: "",
@@ -759,7 +759,7 @@ export interface ListItem {
     },
     {
       id: 'p34',
-      name: '',
+      name: '有志',
       title: 'THUNDERS',
       time1: "15:55",
       time2: "",
@@ -772,7 +772,7 @@ export interface ListItem {
 
     {
       id: 'p35',
-      name: '',
+      name: '有志',
       title: 'Finished',
       time1: "18:00",
       time2: "13:30",
@@ -782,7 +782,7 @@ export interface ListItem {
     },
     {
       id: 'p36',
-      name: '',
+      name: '有志',
       title: 'Finished',
       time1: "15:30",
       time2: "13:20",
@@ -792,7 +792,7 @@ export interface ListItem {
     },
     {
       id: 'p37',
-      name: '',
+      name: '有志',
       title: 'Finished',
       time1: "15:30",
       time2: "13:00",
@@ -802,7 +802,7 @@ export interface ListItem {
     },
     {
       id: 'p38',
-      name: '',
+      name: '有志',
       title: 'Finished',
       time1: "15:30",
       time2: "12:00",
@@ -915,6 +915,16 @@ export interface ListItem {
       img: "/F10/1.webp",
       description: "F10"
     },
-    
+
+    {
+      id: 'o1',
+      name: 'フードデザイン講座',
+      title: 'フードデザイン講座商品販売',
+      time1: "",
+      time2: "",
+      location: "高校スタッフルーム前",
+      img: "/O1/1.webp",
+      description: "今年度から開講したフードデザイン講座で、私たちが提案、試作した商品を販売することになりました。昨年度まで立命館で先生をしていらっしゃった、坂本先生のキッチンカーで販売させていただきます。高校スタッフルーム前で前売り券を発売します。ぜひお越しください！"
+    },
   ];
   
