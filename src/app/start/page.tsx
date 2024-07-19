@@ -465,14 +465,14 @@ function Section5() {
             </div>
             <div className="flex items-center space-x-1">
               <div className="w-16 h-16 flex items-center justify-center">
-                <Image src="/NO.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+                <Image src="/start/Masaya.webp" alt="Icon" width={50} height={50} className="rounded-full" />
               </div>
               <span className="text-2xl">Ochiai Masaya</span>
               <span>(Data Manager)</span>
             </div>
             <div className="flex items-center space-x-1">
               <div className="w-16 h-16 flex items-center justify-center">
-                <Image src="/NO.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+                <Image src="/start/Shido.webp" alt="Icon" width={50} height={50} className="rounded-full" />
               </div>
               <span className="text-2xl">Ito Shido</span>
               <span>(Special Thanks)</span>
