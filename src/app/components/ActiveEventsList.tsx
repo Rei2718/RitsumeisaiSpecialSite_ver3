@@ -85,7 +85,7 @@ const ActiveEventsList: React.FC = () => {
     <div className='w-4/5 py-5 mx-auto max-w-md'>
       <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl">
         <p className='text-center text-lg pt-2'>
-          <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
+          <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Events <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
         </p>
   
         {/* Remove before the event day */}

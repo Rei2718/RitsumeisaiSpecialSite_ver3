@@ -41,7 +41,7 @@ export default function RootLayoutClient({
       ) : (
         <ColorPresetProvider>
           <ListsProvider>
-            <div className="text-black">
+            <div className="text-black font-medium">
               <Suspense>
                 <Background />
                 {children}

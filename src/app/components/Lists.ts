@@ -772,7 +772,7 @@ export interface ListItem {
 
     {
       id: 'p35',
-      name: '有志',
+      name: '終了',
       title: 'Finished',
       time1: "18:00",
       time2: "13:30",
@@ -782,7 +782,7 @@ export interface ListItem {
     },
     {
       id: 'p36',
-      name: '有志',
+      name: '終了',
       title: 'Finished',
       time1: "15:30",
       time2: "13:20",
@@ -792,7 +792,7 @@ export interface ListItem {
     },
     {
       id: 'p37',
-      name: '有志',
+      name: '終了',
       title: 'Finished',
       time1: "15:30",
       time2: "13:00",
@@ -802,7 +802,7 @@ export interface ListItem {
     },
     {
       id: 'p38',
-      name: '有志',
+      name: '終了',
       title: 'Finished',
       time1: "15:30",
       time2: "12:00",
