@@ -26,6 +26,13 @@ interface EventItem {
   description: string;
 }
 
+const locationTranslation: { [key: string]: string } = {
+  'Arena': 'アリーナ',
+  'Co-Tan': 'コタン',
+  'Atrium': 'アトリウム',
+  'Assembly': 'アセンブリー',
+};
+
 const ActiveEventsList: React.FC = () => {
   const { lists } = useLists();
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -86,17 +93,13 @@ const ActiveEventsList: React.FC = () => {
       <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl">
         <p className='text-center text-lg pt-2'>
           <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Events <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
-        </p>
-  
-        {/* Remove before the event day */}
-        <div className='flex items-center justify-center animate-pulse text-xs'>注 : 立命祭は20,21日開催です</div>
-  
+        </p>  
         <div className={`grid gap-1 pt-2 px-2 ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
           {activeEventList.map((activeItem) => (
             <div key={activeItem.id} className="w-full mx-auto p-2 flex items-start justify-start animate-pulse">
               <div className="flex gap-x-2 relative group rounded-lg justify-start">
                 <div className="flex items-center justify-center">
-                  <button type="button" className="text-left relative z-10 inline-flex items-center gap-x-1 text-xs rounded-lg border border-transparent" onClick={() => router.push(`/EventDetails?id=${activeItem.id}`)}>
+                  <button type="button" className="text-left relative z-10 inline-flex items-center gap-x-1 text-xs rounded-lg border border-transparent" onClick={() => router.push(`/time`)}>
                     <div className="flex-shrink-0 pr-2 w-[30px] h-[30px] relative">
                       <Image
                         src={activeItem.img}
@@ -109,7 +112,7 @@ const ActiveEventsList: React.FC = () => {
                       <div><span className={`${getColorByGrade(activeItem.id)} rounded-md px-2 mr-2 pb-0.5 w-10 text-center`}>{activeItem.name}</span>{activeItem.title}</div>
                       <div className="flex items-center space-x-1">
                         <p className="text-xs">{activeItem.time1}~</p>
-                        <p className="text-xs">@{activeItem.location}</p>
+                        <p className="text-xs">@{locationTranslation[activeItem.location] || activeItem.location}</p>
                       </div>
                     </div>
                   </button>

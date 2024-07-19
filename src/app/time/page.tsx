@@ -17,6 +17,13 @@ const getColorByGrade = (id: string) => {
   return 'bg-gray-200';
 };
 
+const locationMap: { [key: string]: string } = {
+  'Arena': 'アリーナ',
+  'Co-Tan': 'コタン',
+  'Atrium': 'アトリウム',
+  'Assembly': 'アセンブリー',
+};
+
 // Tab Component
 const Tab: React.FC<{ label: string; isActive: boolean; onClick: () => void }> = ({ label, isActive, onClick }) => (
   <button
@@ -47,7 +54,6 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
         <p className='text-center text-lg pt-2'>
           <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
         </p>
-        <div className='flex items-center justify-center animate-pulse'>注 : 立命祭は20,21日開催です</div>
         {activeEvents.map((activeItem) => (
           <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse">
             <div className="flex gap-x-2 relative group rounded-lg justify-center">
@@ -65,7 +71,7 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
                     <div><span className={`${getColorByGrade(activeItem.id)} rounded-md px-2 mr-2 pb-0.5 w-10 text-center`}>{activeItem.name}</span>{activeItem.title}</div>
                     <div className="flex items-center space-x-1">
                       <p className="text-xs">{activeItem.time1}~</p>
-                      <p className="text-xs">@{activeItem.location}</p>
+                      <p className="text-xs">@{locationMap[activeItem.location]}</p>
                     </div>
                   </div>
                 </button>
@@ -126,13 +132,6 @@ const ItemList: React.FC<{ items: any[]; currentTime: Date }> = ({ items, curren
         const linkHref = generateLinkHref(item);
         const nextItemTime = sortedItems[index + 1]?.time1;
 
-        const locationMap: { [key: string]: string } = {
-          'Arena': 'アリーナ',
-          'Co-Tan': 'コタン',
-          'Atrium': 'アトリウム',
-          'Assembly': 'アセンブリー',
-        };
-
         return (
           <div key={item.id} className={`flex gap-x-3 relative group rounded-xl p-2 justify-center ${isActiveItem(item.time1, nextItemTime) ? 'bg-gradient-to-r from-yellow-100 via-yellow-50 via-[70%] to-transparent to-[99%] animate-pulse' : ''}`}>
             {!item.id.startsWith('p') && linkHref && <Link href={linkHref} className="absolute inset-0 z-[1]" />}
@@ -169,13 +168,6 @@ const ItemList: React.FC<{ items: any[]; currentTime: Date }> = ({ items, curren
 const TabContents: React.FC<{ activeTab: string; items: any[]; currentTime: Date }> = ({ activeTab, items, currentTime }) => {
   const filteredItems = useMemo(() => items.filter(item => item.location === activeTab && item.time1 && !item.id.startsWith('f')), [activeTab, items]);
 
-  const locationMap: { [key: string]: string } = {
-    'Arena': 'アリーナ',
-    'Co-Tan': 'コタン',
-    'Atrium': 'アトリウム',
-    'Assembly': 'アセンブリー',
-  };
-
   return (
     <div className="pt-20">
       <ItemList items={filteredItems} currentTime={currentTime} />
@@ -202,13 +194,6 @@ const Time1: React.FC = () => {
   const filteredItems = useMemo(() => lists.filter(item => validLocations.includes(item.location)), [lists, validLocations]);
 
   const tabs = useMemo(() => validLocations.map(location => ({ id: location, label: location })), [validLocations]);
-
-  const locationMap: { [key: string]: string } = {
-    'Arena': 'アリーナ',
-    'Co-Tan': 'コタン',
-    'Atrium': 'アトリウム',
-    'Assembly': 'アセンブリー',
-  };
 
   return (
     <>

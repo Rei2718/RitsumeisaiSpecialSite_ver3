@@ -20,7 +20,7 @@ function HomeContent() {
   return (
     <div className="relative z-10">
       <section className="relative h-svh w-screen">
-        <ActiveEventsList />
+        <ActiveEventsList/>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
           <div className="font-londrina mb-4 px-2 text-6xl md:text-7xl lg:text-10xl">
             <div className={londrinaSolid.className}>
