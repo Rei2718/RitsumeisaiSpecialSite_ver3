@@ -323,12 +323,12 @@ function Section3() {
                   <span className="text-[10px]">TIME</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <MdOutlineFastfood className={ICON_SIZE} />
-                  <span className="text-[10px]">FOOD</span>
-                </div>
-                <div className="flex flex-col items-center">
                   <BsPeople className={ICON_SIZE} />
                   <span className="text-[10px]">CLASS</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <MdOutlineFastfood className={ICON_SIZE} />
+                  <span className="text-[10px]">FOOD</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <HiOutlineBars3BottomRight className={ICON_SIZE} />
@@ -455,13 +455,13 @@ function Section5() {
           as="div"
         >
           <p className="text-3xl">~ Website Credits ~</p>
-          <div className="flex flex-col items-start space-y-2 mt-8">
+          <div className="flex flex-col items-center space-y-2 mt-8">
             <div className="flex items-center space-x-1">
               <div className="w-16 h-16 flex items-center justify-center">
                 <Image src="/start/Ichiro.webp" alt="Icon" width={50} height={50} className="rounded-full" />
               </div>
               <span className="text-2xl">Ishikawa Ichiro</span>
-              <span>(Creator)</span>
+              <span>(Developer)</span>
             </div>
             <div className="flex items-center space-x-1">
               <div className="w-16 h-16 flex items-center justify-center">
@@ -469,6 +469,13 @@ function Section5() {
               </div>
               <span className="text-2xl">Ochiai Masaya</span>
               <span>(Data Manager)</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <Image src="/start/Haku.webp" alt="Icon" width={50} height={50} className="rounded-full" />
+              </div>
+              <span className="text-2xl">Fujiwara Haku</span>
+              <span>(Adviser)</span>
             </div>
             <div className="flex items-center space-x-1">
               <div className="w-16 h-16 flex items-center justify-center">

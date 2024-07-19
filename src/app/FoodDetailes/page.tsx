@@ -70,7 +70,7 @@ const FoodDetailsPage = () => {
         </div>
 
         {/* Text Section */}
-        <div className="relative min-h-screen top-0 z-10" style={{ background: `linear-gradient(to bottom, rgba(255, 255, 255, 0.3), ${colors[3]} 60rem, rgba(50, 50, 50, 1) 90rem)` }}>
+        <div className="relative min-h-screen top-0 z-10" style={{ background: `linear-gradient(to bottom, rgba(255, 255, 255, 0), ${colors[3]} 60rem, rgba(50, 50, 50, 1) 90rem)` }}>
           {/* Back Button */}
           <button 
             className="absolute top-1 left-1 text-[rgb(255,255,255)] rounded m-3 flex items-center z-50"

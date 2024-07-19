@@ -198,9 +198,9 @@ const Time1: React.FC = () => {
   return (
     <>
       <nav className="sticky-navbar fixed top-2 left-2 right-2 transform translate-x-0 w-auto max-w-xl mx-auto z-50 backdrop-filter backdrop-blur-sm shadow-md rounded-full flex justify-center items-center p-1" style={{ backgroundColor: colors[2] }}>
-        <div className="flex justify-center">
+        <div className="flex justify-between w-full">
           {tabs.map((tab) => (
-            <div key={tab.id} className="mx-1 my-0.5">
+            <div key={tab.id} className="flex-grow text-center mx-1 my-0.5">
               <Tab
                 label={locationMap[tab.label]}
                 isActive={activeTab === tab.id}

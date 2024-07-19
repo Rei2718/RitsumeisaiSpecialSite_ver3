@@ -209,6 +209,7 @@ const FullscreenMenu = ({ isOpen, toggleMenu, handleLinkClick, activeMenu, toggl
         <MenuItem onClick={() => { handleLinkClick('/food'); setSelectedIcon('/food'); }}>フード</MenuItem>
         <MenuItem onClick={() => { handleLinkClick('/class'); setSelectedIcon('/class'); }}>クラス企画</MenuItem>
         <MenuItem onClick={() => { handleLinkClick('/map'); setSelectedIcon('/map'); }}>バスダイヤ</MenuItem>
+        <MenuItem onClick={() => { handleLinkClick('/credit'); setSelectedIcon('/credit'); }}>Site Credits</MenuItem>
       </ul>
       {/* SetButton */}
       <div className="absolute inset-x-0 bottom-[12.5vh] w-9/12 max-w-md mx-auto z-10">
