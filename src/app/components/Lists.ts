@@ -810,19 +810,6 @@ export interface ListItem {
       img: "/logo.png",
       description: ""
     },
-    {
-      id: 'p39',
-      name: 'TEST',
-      title: 'Finished',
-      time1: "05:20",
-      time2: "12:00",
-      location: "Atrium",
-      img: "/logo.png",
-      description: ""
-    },
-
-
-
 
     {
       id: 'f1',
