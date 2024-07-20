@@ -53,6 +53,7 @@ const ActiveEvent: React.FC<{ activeEvents: any[] }> = ({ activeEvents }) => {
       <div className="bg-white/30 backdrop-blur-lg rounded-2xl">
         <p className='text-center text-lg pt-2'>
           <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Event <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
+          <p className='text-xs'>発表が既に終了している可能性があります。ご注意ください。</p>
         </p>
         {activeEvents.map((activeItem) => (
           <div key={activeItem.id} className="w-full mx-auto p-2 flex items-center justify-center animate-pulse">
