@@ -92,7 +92,8 @@ const ActiveEventsList: React.FC = () => {
     <div className='w-11/12 py-5 mx-auto max-w-md'>
       <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl z-[30] relative">
         <p className='text-center text-lg pt-2'>
-          <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Events <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>  
+          <span className='inline-block transform -rotate-45 animate-pingHalf'>!!</span> Current Events <span className='inline-block transform rotate-45 animate-pingHalf'>!!</span>
+          
         </p>
         <div className={`grid gap-1 pt-2 px-2 ${activeEventList.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
           {activeEventList.map((activeItem) => (
