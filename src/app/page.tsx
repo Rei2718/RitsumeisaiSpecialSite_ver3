@@ -20,7 +20,11 @@ function HomeContent() {
   return (
     <div className="relative z-10">
       <section className="relative h-svh w-screen">
-        <ActiveEventsList/>
+        <div className='w-11/12 py-5 mx-auto max-w-md'>
+          <div className="bg-white/30 backdrop-blur-lg backdrop-white rounded-2xl z-[30] relative text-center p-10">
+            第29回立命祭は終了しました
+          </div>
+        </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
           <div className="font-londrina mb-4 px-2 text-6xl md:text-7xl lg:text-10xl">
             <div className={londrinaSolid.className}>
